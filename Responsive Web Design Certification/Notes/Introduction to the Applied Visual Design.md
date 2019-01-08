@@ -28,7 +28,7 @@ Similar to the width property, using relative, absolute, and percentage units.
 
 # Use the strong Tag to Make Text Bold
 This is often used to draw attention to text and symbolize that it is important.
-With the <strong> tag, the browser applies the CSS of font-weight: bold; to the element.
+With the <strong></strong> tag, the browser applies the CSS of font-weight: bold; to the element.
 <strong>Stanford University</strong>
 
 # Use the u Tag to Underline Text
