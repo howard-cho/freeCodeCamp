@@ -44,7 +44,7 @@ The browser applies the CSS of font-style: italic; to the element.
 
 # Use the s Tag to Strikethrough Text
 When a horizontal line cuts across the characters. It shows that a section of text is no longer valid.
-With the <s> tag, the browser applies the CSS of text-decoration: line-through; to the element.
+With the <s></s> tag, the browser applies the CSS of text-decoration: line-through; to the element.
 
 # Create a Horizontal Line Using the hr Element
 Use the <hr> tag to add a horizontal line across the width of its containing element.
