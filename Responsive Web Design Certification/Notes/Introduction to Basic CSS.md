@@ -13,5 +13,12 @@ CSS allows you to control:
 
 # Change the Color of Text
 
-<h2 style="color: blue;">CatPhotoApp</h2>
+<h2 style="color: blue;">CatPhotoApp</h2> <!-- inline CSS -->
 
+# Use CSS Selectors to Style Elements
+
+Inside <head> block, create a <style> block
+
+<style>
+  h2 {color: red;}
+</style>
