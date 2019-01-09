@@ -83,6 +83,36 @@ A value of 1 is opaque, which isn't transparent at all.
 A value of 0.5 is half see-through.
 A value of 0 is completely transparent.
 
+# Use the text-transform Property to Make Text Uppercase
+
+The text-transform property in CSS is used to change the appearance of text. It's a convenient way to make sure text on a webpage appears consistently, without having the change the text content of the actual HTML elements.
+
+text-transform values:
+
+Value        Result
+lowercase    "transform me"
+uppercase    "TRANSFORM ME"
+capitalize   "Transform Me"
+initial      Use the default value
+inherit      Use the text-transform value from the parent element
+none         Default: Use the original text
+
+# Set the font-size for Multiple Heading Elements
+# Set the font-weight for Multiple Heading Elements
+font-weight property sets how thick or thin characters are in a section of text.
+
+# Set the line-height of Paragraphs
+line-height property changes the height of each line in a block of text. It changes the amount of vertical space that each line of text gets.
+
+# Adjust the Hover State of an Anchor Tag
+A psuedo-class is a keyword that can be added to selectors, in order to select a specific state of the element.
+
+The styling of an anchor tag can be changed for its hover state using the :hover pseudo-class selector.
+<style>
+  a:hover {
+    color: red;
+  }
+</style>
 
 
 
