@@ -291,3 +291,157 @@ Adding black will make a shade.
 </style>
 
 # Create a Gradual CSS Linear Gradient
+
+CSS provides the ability to use color transitions (gradients) on elements.
+
+Syntax:
+background: linear-gradient(gradient_direction, color 1, color 2, color 3, ...);
+
+gradient_direction specifies the direction from which color transition starts - stated as a degree.
+90deg - vertical gradient
+45deg - angled like a backslash.
+
+<style>
+  div{ 
+    border-radius: 20px;
+    width: 70%;
+    height: 400px;
+    margin: 50px auto;
+    background: linear-gradient(35deg, #CCFFFF, #FFCCCC);
+  }
+</style>
+
+# Use a CSS Linear Gradient to Create a Striped Element
+
+background: repeating-linear-gradient(); repeats the specified gradient pattern.
+Angle pattern (90deg for vertical), with color stop values.
+
+https://learn.freecodecamp.org/responsive-web-design/applied-visual-design/use-a-css-linear-gradient-to-create-a-striped-element
+
+If every two color stop values are the same color, the blending isn't noticeable because it's between the same color, followed by a hard transition to the next color, so you end up with stripes.
+
+<style>
+  div{ 
+    border-radius: 20px;
+    width: 70%;
+    height: 400px;
+    margin:  50 auto;
+    background: repeating-linear-gradient(
+      45deg,
+      yellow 0px,
+      yellow 40px,
+      black 40px,
+      black 80px
+    );
+  }
+</style>
+
+# Create Texture by Adding a Subtle Pattern as a Background Image
+
+The background property supports the url() function to link to an image of the chosen texture or pattern.
+
+<style>
+  body {
+    background: url(https://i.imgur.com/MJAkxbh.png);
+  }
+</style>
+
+# Use the CSS Transform scale Property to Change the Size of an Element
+
+transform: scale() changes the scale of an element.
+
+<style>
+  p {
+    transform: scale(2); /* double the size */
+  }
+</style>
+
+Add interactivity to your elements using the transform property with on hover
+
+<style>
+  p:hover {
+    transform: scale(2.1);
+  }
+</style>
+
+# Use the CSS Transform Property skewX and skewY to Skew an Element Along the X-Axis and Y-Axis.
+
+transform: skewX(); skews the element along its X (horizontal) axis by a given degree.
+transform: skewY(); skews the element along its Y (vertical) axis by a given degree.
+
+<style>
+  p {
+    transform: skewX(-32deg);
+  }
+  h1 {
+    transform: skewY(-10deg);
+  }
+</style>
+
+# Create a Graphic Using CSS
+
+box-shadow property sets the shadow of an element.
+border-radius property controls the roundness of the element's borders.
+
+https://learn.freecodecamp.org/responsive-web-design/applied-visual-design/create-a-graphic-using-css
+
+<style>
+.center
+{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  
+  background-color: rgba(0,0,255,0);
+  border-radius: 50%;
+  box-shadow: 25px 10px 0 0 blue; 
+}
+
+</style>
+<div class="center"></div>
+
+# Create a More Complex Shape Using CSS and HTML
+
+Create a heart symbol using pure CSS:
+https://learn.freecodecamp.org/responsive-web-design/applied-visual-design/create-a-more-complex-shape-using-css-and-html
+
+<style>
+.heart {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: pink;
+  height: 50px;
+  width: 50px;
+  transform: rotate(-45deg);
+}
+.heart::after {
+  background-color: pink;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0px;
+  left: 25px;
+}
+.heart::before {
+  content: "";
+  background-color: pink;
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: -25px;
+  left: 0px;
+}
+</style>
+<div class = "heart"></div>
