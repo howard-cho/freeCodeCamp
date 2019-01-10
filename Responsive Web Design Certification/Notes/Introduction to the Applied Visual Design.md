@@ -445,3 +445,243 @@ https://learn.freecodecamp.org/responsive-web-design/applied-visual-design/creat
 }
 </style>
 <div class = "heart"></div>
+
+# Learn How the CSS @keyframes and animation Properties Work
+
+The animations properties control how the animation should behave. Eight total.
+@keyframes rule controls what happens during that animation.
+
+animation-name - sets the name of the animation, which is later used by @keyframes to tell CSS which rules go with which animations.
+
+animation-duration - sets the length of time for the animation.
+
+@keyframes - specify what happens within the animation over the duration.
+Gives CSS properties for specific "frames" during the animation, with percentages from 0% to 100%.
+
+Compared to a movie, CSS property for 0% is opening scene, 100% is at the end.
+
+For the element with the anim id, set the animation-nam to colorful and set the animation-duration to 3 seconds.
+@keyframes rule links the animation properties with the name colorful.
+
+<style>
+  #anim {
+    animation-name: colorful;
+    animation-duration: 3s;
+  }
+  @keyframes colorful {
+    0% {
+      background-color: blue;
+    }
+    50% {
+      background-color: green;
+    }
+    100% {
+      background-color: yellow;
+    }
+  }
+</style>
+
+# Use CSS Animation to Change the Hover State of a Button
+
+<style>
+  img:hover {
+    animation-name: width;
+    animation-duration: 500ms;
+  }
+  @keyframes width {
+    100% {
+      width: 40px;
+    }
+  }
+</style>
+
+# Modify Fill Mode of an Animation
+
+animation-fill-mode - specifies the style applied to an element when the animation has finished.
+
+<style>
+  button {
+    border-radius: 5px;
+    color: white;
+    background-color: #0F5897;
+    padding: 5px 10px 8px 10px;
+  }
+  button:hover {
+    animation-name: background-color;
+    animation-duration: 500ms;
+    /* add your code below this line */
+    animation-fill-mode: forwards;
+    /* add your code above this line */
+  }
+  @keyframes background-color {
+    100% {
+      background-color: #4791d0;
+    }
+  }
+</style>
+
+<button>Register</button>
+
+# Create Movement Using CSS Animation
+
+When elements have a specified position, such as fixed or relative, the CSS offset properties right, left, top, bottom can be used in animation rules to create movement.
+
+<style>
+  div {
+    height: 40px;
+    width: 70%;
+    background: black;
+    margin: 50px auto;
+    border-radius: 5px;
+    position: relative;
+  }
+
+#rect {
+  animation-name: rainbow;
+  animation-duration: 4s;
+}
+
+@keyframes rainbow {
+  0% {
+    background-color: blue;
+    top: 0px;
+    left: 0px;
+  }
+  50% {
+    background-color: green;
+    top: 50px;
+    left: 25px;
+  }
+  100% {
+    background-color: yellow;
+    top: 0px;
+    left: -25px;
+  }
+}
+</style>
+
+<div id="rect"></div>
+
+# Create Visual Direction by Fading an Element from Left to Right
+
+Using the opacity property with @keyframes.
+
+<style>
+  @keyframes fade {
+    50% {
+      left: 60%;
+      opacity: 0.1;
+    }
+  }
+</style>
+
+# Animate Elements Continually Using an Infinite Animation Count
+
+animation-iteration-count - control how many times you would like to loop through the animation.
+
+animation-iteration-count: infinite;
+
+# Make a CSS Heartbeat using an Infinite Animation Count
+
+<style>
+  .back {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    animation-name: backdiv;
+    animation-duration: 1s; 
+    animation-iteration-count: infinite;
+  }
+
+  .heart {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: pink;
+    height: 50px;
+    width: 50px;
+    transform: rotate(-45deg);
+    animation-name: beat;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+  .heart:after {
+    background-color: pink;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    left: 25px;
+  }
+  .heart:before {
+    background-color: pink;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: 0px;
+  }
+
+  @keyframes backdiv {
+    50% {
+      background: #ffe6f2;
+    }
+  }
+
+  @keyframes beat {
+    0% {
+      transform: scale(1) rotate(-45deg);
+    }
+    50% {
+      transform: scale(0.6) rotate(-45deg);
+    }
+  }
+
+</style>
+<div class="back"></div>
+<div class="heart"></div>
+
+# Animate Elements at Variable Rates
+
+animation-timing-function - controls how quickly an animated element changes over the duration of the animation.
+
+ease - (default) starts slow, speeds up in middle, then slows down again in the end.
+ease-out - quick in the beginning then slows down
+ease-in - slow in the beginning then speeds up
+linear - constant animation speed throughout
+
+# Learn How Bezier Curves Work
+
+cubic-bezier(p0, p1, p2, p3)
+
+Same as animation-timing-function: linear;
+animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
+https://learn.freecodecamp.org/responsive-web-design/applied-visual-design/learn-how-bezier-curves-work
+
+# Use a Bezier Curve to Move a Graphic
+
+In general, changing the p1 and p2 anchor points drives the creation of different Bezier curves, which controls how the animation progresses through time.
+
+Same as animation-timing-function: ease-out;
+animation-timing-function: cubic-bezier(0, 0, 0.58, 1);
+
+All cubic-bezier functions start with p0 at (0,0) and end with p3 at (1,1)
+
+# Make Motion More Natural Using a Bezier Curve
+
+animation-timing-function automatically loops at every keyframe when the animation-iteration-count is set to infinite.
+Juggling cubic-bezier
+animation-timing-function: cubic-bezier(0.311, 0.441, 0.444, 1.649);
+https://learn.freecodecamp.org/responsive-web-design/applied-visual-design/make-motion-more-natural-using-a-bezier-curve
